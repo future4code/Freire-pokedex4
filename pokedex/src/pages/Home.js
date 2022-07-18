@@ -3,13 +3,13 @@ import { useNavigate } from "react-router-dom";
 
 
 export const Home = () => { 
-    useNavigate()
+    const navigate = useNavigate()
     
     const goToPokedex = () => {
-        useNavigate("/pokedex")
+        navigate("/pokedex")
     }
     const goDetailPage = () => {
-        useNavigate("detail")
+        navigate("/detail")
     }
 
 

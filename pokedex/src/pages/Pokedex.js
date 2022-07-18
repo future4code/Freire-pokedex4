@@ -4,14 +4,14 @@ import { useNavigate } from "react-router-dom";
 export const Pokedex = () => { 
 
 
-    useNavigate()
+    const navigate = useNavigate()
 
     const goToHome = () => {
-        useNavigate("/")
+        navigate("/")
     }
 
     const goDetailPage = () => {
-        useNavigate("detail")
+        navigate("/detail")
     }
     return(
         <div>
