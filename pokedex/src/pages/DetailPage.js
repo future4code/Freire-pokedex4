@@ -3,15 +3,15 @@ import { useNavigate } from "react-router-dom";
 
 export const DetailPage = () => { 
 
-    useNavigate()
+   const navigate = useNavigate()
     
     const goToHome = () => {
-        useNavigate("/")
+        navigate("/")
     }
     return(
         <div>
             <p>Página de Detalhes</p>
-            <button onClick={goToHome}></button>
+            <button onClick={goToHome}>goToHome</button>
         </div>
     )
 }
