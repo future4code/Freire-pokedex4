@@ -11,7 +11,7 @@ export const DetailPage = () => {
     return(
         <div>
             <p>Página de Detalhes</p>
-            <button onClick={goToHome}>goToHome</button>
+            <button onClick={goToHome}>Home</button>
         </div>
     )
 }
