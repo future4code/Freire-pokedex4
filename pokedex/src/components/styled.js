@@ -10,6 +10,8 @@ align-items: center;
 `
 
 export const Button = styled.button`
+
+
 border: none;
 border-radius: 8px;
 box-shadow: ;
