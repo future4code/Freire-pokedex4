@@ -1,19 +1,15 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import PokedexContext from "../PokedexContext";
 
 export const Home = () => {
   const navigate = useNavigate();
 
-  const goDetailPage = (index) => {
-    navigate(`/detail/${index}`);
+  const goToPokedex = () => {
+    navigate("/pokedex");
   };
-
-  // const goToPokedex = () => {
-  //   navigate("/pokedex");
-  // };
-
-  const { pokemons, removePokedex, addPokedex } = useContext(PokedexContext)
+  const goDetailPage = () => {
+    navigate("/detail");
+  };
 
   return (
     <div>
@@ -37,6 +33,9 @@ export const Home = () => {
         ))}
       </div>
       
+      <button onClick={goToPokedex}>ir para pokedex</button>
+      <button onClick={goDetailPage}>página de detalhe</button>
+
     </div>
   );
 };

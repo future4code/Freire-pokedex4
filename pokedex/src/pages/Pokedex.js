@@ -1,7 +1,11 @@
 import React, { useEffect } from "react";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+
 import PokedexContext from "../PokedexContext";
+
+import { Background } from "./styled";
+
 
 export const Pokedex = () => {
 
@@ -23,7 +27,7 @@ export const Pokedex = () => {
   },[])
  
   return (
-    <div>
+    <Background>
       <p>Pokedex</p>
       <br />
       <br />
@@ -43,7 +47,11 @@ export const Pokedex = () => {
           </span>
         ))}
       </div>
+
       {/* <button onClick={goToHome}>Home</button> */}
     </div>
+
+      <button onClick={goToHome}>Home</button>
+    </Background>
   );
 };
