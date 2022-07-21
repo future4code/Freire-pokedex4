@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { Background } from "./styled";
 
 export const Pokedex = () => {
   const navigate = useNavigate();
@@ -12,10 +13,10 @@ export const Pokedex = () => {
     navigate("/detail");
   };
   return (
-    <div>
+    <Background>
       <p>Pokedex</p>
       <button onClick={goDetailPage}>página de detalhe</button>
       <button onClick={goToHome}>Home</button>
-    </div>
+    </Background>
   );
 };
