@@ -1,6 +1,33 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import PokedexContext from "../PokedexContext";
 
+import { Background } from "./styled";
+
+
+
+export const Home = () => {
+  const navigate = useNavigate();
+
+
+  const goDetailPage = (index) => {
+    navigate(`/detail/${index}`);
+  };
+
+  const goToPokedex = () => {
+    navigate("/pokedex");
+  };
+
+  const { pokemons, removePokedex, addPokedex } = useContext(PokedexContext)
+
+  
+
+  // const allpkms = pkms.map((pkms,key) => <p key={key}>{pkms?.name}</p> )
+
+
+
+  
+=======
 export const Home = () => {
   const navigate = useNavigate();
 
@@ -11,6 +38,7 @@ export const Home = () => {
     navigate("/detail");
   };
 
+
   return (
     <div>
       <p>Home</p>
@@ -19,7 +47,7 @@ export const Home = () => {
       <div>
         {pokemons.map((p, index) => (
           <span key={index}>
-            <img src={p.img} width={50} height={50} /> {/* imagem do pokemon*/}
+            <img src={p.img} width={50} height={50} alt="" /> {/* imagem do pokemon*/}
             <p>
               {p.name}
             </p>
