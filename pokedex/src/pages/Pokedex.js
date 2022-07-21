@@ -10,8 +10,8 @@ export const Pokedex = () => {
     navigate("/");
   };
 
-  const goDetailPage = () => {
-    navigate("/detail");
+  const goDetailPage = (index) => {
+    navigate(`/detail/${index}`);
   };
 
   const {pokemons,removePokedex,_} = useContext(PokedexContext)
@@ -26,20 +26,20 @@ export const Pokedex = () => {
       <br />
       <br />
       <div>
-        {pokemons.filter(p => p.inPokedex).map((p, index) => (
-          <span key={index}>
+        {pokemons.map((p, index) => (
+          <span key={index} hidden={!p.inPokedex}>
             <img src={p.img} width={50} height={50} />
             <p>
               {p.name}
             </p>
             <p>{p.skills.map(s => " " + s + " ")}</p>
              <button onClick={() => removePokedex(index)}>Remover da Pokedex</button>
+             <button onClick={() => goDetailPage(index)}>página de detalhe</button>
             <br />
             <br />
           </span>
         ))}
       </div>
-      <button onClick={goDetailPage}>página de detalhe</button>
       <button onClick={goToHome}>Home</button>
     </div>
   );

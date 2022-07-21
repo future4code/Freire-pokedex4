@@ -20,6 +20,10 @@ function App() {
     pokemon["name"] = body.name
     pokemon["skills"] = body.types.map((slot) => slot.type.name)
     pokemon["img"] = body.sprites.other["official-artwork"].front_default
+    pokemon["img_front"] = body.sprites.front_default
+    pokemon["img_back"] = body.sprites.back_default
+    pokemon["moves"] = body.moves.map((moves) => moves.move.name)
+    pokemon["stats"] = body.stats.map(stats => [stats.stat.name,stats.base_stat])
     pokemon["inPokedex"] = false
     return pokemon
   }
