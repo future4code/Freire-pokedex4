@@ -8,11 +8,13 @@ import { Background } from "./styled";
 
 
 export const Pokedex = () => {
+
+
   const navigate = useNavigate();
 
-  const goToHome = () => {
-    navigate("/");
-  };
+  // const goToHome = () => {
+  //   navigate("/");
+  // };
 
   const goDetailPage = (index) => {
     navigate(`/detail/${index}`);
@@ -23,7 +25,7 @@ export const Pokedex = () => {
   useEffect(() => {
     
   },[])
-
+ 
   return (
     <Background>
       <p>Pokedex</p>
@@ -32,18 +34,23 @@ export const Pokedex = () => {
       <div>
         {pokemons.map((p, index) => (
           <span key={index} hidden={!p.inPokedex}>
-            <img src={p.img} width={50} height={50} />
+            <img src={p.img} width={100} height={100} />
             <p>
               {p.name}
             </p>
             <p>{p.skills.map(s => " " + s + " ")}</p>
-             <button onClick={() => removePokedex(index)}>Remover da Pokedex</button>
+             <button onClick= {() => removePokedex(index)}>Remover da Pokedex</button>
+             
              <button onClick={() => goDetailPage(index)}>página de detalhe</button>
             <br />
             <br />
           </span>
         ))}
       </div>
+
+      {/* <button onClick={goToHome}>Home</button> */}
+    </div>
+
       <button onClick={goToHome}>Home</button>
     </Background>
   );
