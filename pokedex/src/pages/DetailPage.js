@@ -1,12 +1,11 @@
 import React, { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import PokedexContext from "../PokedexContext";
 
-
-export const DetailPage = (id) => {
-  const { pokemons, removePokedex, addPokedex } = useContext(PokedexContext) ;
-   const navigate = useNavigate();
-
+export const DetailPage = () => {
+  const { pokemons, removePokedex, addPokedex } = useContext(PokedexContext);
+  const navigate = useNavigate();
+  const { id } = useParams();
   const goToHome = () => {
     navigate("/");
   };
@@ -18,14 +17,15 @@ export const DetailPage = (id) => {
         <br />
         <br />
         <br />
-        {!pokemons[id].inPokedex ? <button onClick={() => addPokedex(id)}>Adicionar à Pokedex</button> :
-          <button onClick={() => removePokedex(id)}>Remover da Pokedex</button>}
+        {!pokemons[id].inPokedex ? (
+          <button onClick={() => addPokedex(id)}>Adicionar à Pokedex</button>
+        ) : (
+          <button onClick={() => removePokedex(id)}>Remover da Pokedex</button>
+        )}
         <br />
         <img src={pokemons[id].img} width={150} height={150} alt="" />
-        <p>
-          {pokemons[id].name}
-        </p>
-        <p>{pokemons[id].skills.map(s => " " + s + " ")}</p>
+        <p>{pokemons[id].name}</p>
+        <p>{pokemons[id].skills.map((s) => " " + s + " ")}</p>
         <img src={pokemons[id].img_front} width={80} height={80} alt="" />
         <img src={pokemons[id].img_back} width={80} height={80} alt="" />
         <p>Base stats</p>
@@ -36,7 +36,9 @@ export const DetailPage = (id) => {
         ))}
       </div>
       <div>
-        <p>{`Total: ${pokemons[id].stats.map(s => s[1]).reduce((i, j) => i + j)}`}</p>
+        <p>{`Total: ${pokemons[id].stats
+          .map((s) => s[1])
+          .reduce((i, j) => i + j)}`}</p>
       </div>
     </div>
   );
