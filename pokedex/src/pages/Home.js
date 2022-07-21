@@ -20,6 +20,7 @@ export const Home = () => {
       <p>Home</p>
       <br />
       <br />
+      <button onClick={goToPokedex}>Ir para pokedex</button> {/*mudar botao */}
       <div>
         {pokemons.map((p, index) => (
           <span key={index}>
@@ -36,7 +37,7 @@ export const Home = () => {
           </span>
         ))}
       </div>
-      <button onClick={goToPokedex}>ir para pokedex</button>
+      
     </div>
   );
 };

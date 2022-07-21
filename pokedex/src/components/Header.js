@@ -8,7 +8,7 @@ export const Header = () => {
     return(
         <DivTop>
             <img src={pokemonlogo} alt="Pokemon Api Logo"/>
-            <Button>Pokédex</Button>
+            <Button>Pokédex</Button> 
         </DivTop>
     )
 }
