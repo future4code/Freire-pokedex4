@@ -44,12 +44,14 @@ function App() {
     const tmp = [...pokemons]
     tmp[index].inPokedex = true
     setPokemons(tmp)
+    alert ("Pokemon adicionado")
   }
 
   const removePokedex = (index) => {
     const tmp = [...pokemons]
     tmp[index].inPokedex = false
     setPokemons(tmp)
+    alert ("Pokemon removido")
   }
 
   return (

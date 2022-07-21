@@ -20,7 +20,6 @@ export const Home = () => {
       <p>Home</p>
       <br />
       <br />
-      {/* <button onClick={goToPokedex}>Ir para pokedex</button> mudar botao botão chato */}
       <div>
         {pokemons.map((p, index) => (
           <span key={index}>
@@ -28,7 +27,7 @@ export const Home = () => {
             <p>
               {p.name}
             </p>
-            <p>{p.skills.map(s => " " + s + " ")}</p> {/* map para skills dos pokemons*/}
+            <p>{p.skills.map(s => " " + s + " ")}</p> {/* o pokemon precisa sumir do home*/}
             {!p.inPokedex ? <button onClick={() => addPokedex(index)}>Adicionar à Pokedex</button> :
               <button onClick={() => removePokedex(index)}>Remover da Pokedex</button>}
               <button onClick={() => goDetailPage(index)}>página de detalhe</button>

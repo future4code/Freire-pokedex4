@@ -4,11 +4,13 @@ import { useNavigate } from "react-router-dom";
 import PokedexContext from "../PokedexContext";
 
 export const Pokedex = () => {
+
+
   const navigate = useNavigate();
 
-  const goToHome = () => {
-    navigate("/");
-  };
+  // const goToHome = () => {
+  //   navigate("/");
+  // };
 
   const goDetailPage = (index) => {
     navigate(`/detail/${index}`);
@@ -19,7 +21,7 @@ export const Pokedex = () => {
   useEffect(() => {
     
   },[])
-
+ 
   return (
     <div>
       <p>Pokedex</p>
@@ -33,14 +35,15 @@ export const Pokedex = () => {
               {p.name}
             </p>
             <p>{p.skills.map(s => " " + s + " ")}</p>
-             <button onClick={() => removePokedex(index)}>Remover da Pokedex</button>
+             <button onClick= {() => removePokedex(index)}>Remover da Pokedex</button>
+             
              <button onClick={() => goDetailPage(index)}>página de detalhe</button>
             <br />
             <br />
           </span>
         ))}
       </div>
-      <button onClick={goToHome}>Home</button>
+      {/* <button onClick={goToHome}>Home</button> */}
     </div>
   );
 };
