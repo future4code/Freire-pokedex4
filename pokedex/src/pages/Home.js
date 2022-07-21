@@ -22,8 +22,14 @@ export const Home = () => {
           <h2>Todos os Pokemons!</h2>
         </div>
         {pokemons.map((p, index) => (
+
           <CardPkm key={index}>
             <img src={p.img} width={150} height={150} alt="" />{" "}
+
+          
+           
+           
+
             {/* imagem do pokemon*/}
             <p>{p.name}</p>
             <p>{p.skills.map((s) => " " + s + " ")}</p>{" "}

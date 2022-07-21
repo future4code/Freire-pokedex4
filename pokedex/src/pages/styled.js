@@ -16,6 +16,7 @@ export const CardPkm = styled.div`
   margin: 10px 10px;
   padding: 5px;
   border-radius: 20px;
+
   height: 300px;
   width: 300px;
   text-align: center;
@@ -48,3 +49,14 @@ export const ButtonCapture = styled.button`
     opacity: 70%;
   }
 `
+
+  width: 280px;
+`;
+
+export const BaseStats = styled.div`
+ display: flex;
+  background-color: #fafaff;
+
+
+`
+

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import PokedexContext from "../PokedexContext";
+import { BaseStats } from "./styled";
 
 export const DetailPage = () => {
   const { pokemons, removePokedex, addPokedex } = useContext(PokedexContext);
@@ -26,14 +27,16 @@ export const DetailPage = () => {
         <img src={pokemons[id].img} width={150} height={150} alt="" />
         <p>{pokemons[id].name}</p>
         <p>{pokemons[id].skills.map((s) => " " + s + " ")}</p>
-        <img src={pokemons[id].img_front} width={80} height={80} alt="" />
-        <img src={pokemons[id].img_back} width={80} height={80} alt="" />
-        <p>Base stats</p>
-        {pokemons[id].stats.map((s, i) => (
-          <span key={i}>
-            <p>{`${s[0]}: ${s[1]}`}</p>
-          </span>
-        ))}
+        <img src={pokemons[id].img_front} width={100} height={100} alt="" />
+        <img src={pokemons[id].img_back} width={100} height={100} alt="" />
+        <BaseStats>
+          <p>Base stats</p>
+          {pokemons[id].stats.map((s, i) => (
+            <span key={i}>
+              <p>{`${s[0]}: ${s[1]}`}</p>
+            </span>
+          ))}
+        </BaseStats>
       </div>
       <div>
         <p>{`Total: ${pokemons[id].stats
