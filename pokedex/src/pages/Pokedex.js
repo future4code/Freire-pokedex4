@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import PokedexContext from "../PokedexContext";
 
-import { Background } from "./styled";
+import { Background,CardPkm } from "./styled";
 
 
 export const Pokedex = () => {
@@ -18,7 +18,7 @@ export const Pokedex = () => {
     navigate(`/detail/${index}`);
   };
 
-  const {pokemons,removePokedex,_} = useContext(PokedexContext)
+  const {pokemons,removePokedex} = useContext(PokedexContext)
 
   useEffect(() => {
     
@@ -27,12 +27,13 @@ export const Pokedex = () => {
   return (
     <Background>
       <p>Pokedex</p>
+      <button onClick={goToHome}>Home</button>
       <br />
       <br />
-      <div>
+      <CardPkm>
         {pokemons.map((p, index) => (
           <span key={index} hidden={!p.inPokedex}>
-            <img src={p.img} width={50} height={50} />
+            <img src={p.img} width={50} height={50} alt="" />
             <p>
               {p.name}
             </p>
@@ -43,8 +44,8 @@ export const Pokedex = () => {
             <br />
           </span>
         ))}
-      </div>
-      <button onClick={goToHome}>Home</button>
+      </CardPkm>
+      
     </Background>
   );
 };
