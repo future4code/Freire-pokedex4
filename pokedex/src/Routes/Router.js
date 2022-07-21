@@ -11,7 +11,7 @@ export const Router = () => {
       <Header />
       <Routes>
         <Route index element={<Home />} />
-        <Route path="/detail" element={<DetailPage />} />
+        <Route path="/detail/:id" element={<DetailPage />} />
         <Route path="/pokedex" element={<Pokedex />} />
       </Routes>
     </BrowserRouter>
