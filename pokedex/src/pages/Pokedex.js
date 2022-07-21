@@ -12,9 +12,9 @@ export const Pokedex = () => {
 
   const navigate = useNavigate();
 
-  // const goToHome = () => {
-  //   navigate("/");
-  // };
+  const goToHome = () => {
+    navigate("/");
+  };
 
   const goDetailPage = (index) => {
     navigate(`/detail/${index}`);
@@ -36,8 +36,8 @@ export const Pokedex = () => {
         {pokemons.map((p, index) => (
           <span key={index} hidden={!p.inPokedex}>
 
-            <img src={p.img} width={50} height={50} alt="" />
-            <img src={p.img} width={100} height={100} />
+            
+            <img src={p.img} width={100} height={100} alt="" />
             <p>
               {p.name}
             </p>
@@ -52,12 +52,9 @@ export const Pokedex = () => {
 
       </CardPkm>
 
-      </div>
+     
 
-      {/* <button onClick={goToHome}>Home</button> */}
-    </div>
-
-      <button onClick={goToHome}>Home</button>
+     
 
     </Background>
   );

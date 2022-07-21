@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     getPokemons()
-  }, [])
+  },[])
 
   const fetchPokemons = async (index) => {
     const body = await (await fetch(`https://pokeapi.co/api/v2/pokemon/${index}/`)).json()
@@ -44,14 +44,14 @@ function App() {
     const tmp = [...pokemons]
     tmp[index].inPokedex = true
     setPokemons(tmp)
-    alert ("Pokemon adicionado")
+    // alert ("Pokemon adicionado")
   }
 
   const removePokedex = (index) => {
     const tmp = [...pokemons]
     tmp[index].inPokedex = false
     setPokemons(tmp)
-    alert ("Pokemon removido")
+    // alert ("Pokemon removido")
   }
 
   return (
