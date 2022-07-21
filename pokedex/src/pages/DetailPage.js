@@ -1,6 +1,9 @@
+
 import React, { useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import PokedexContext from "../PokedexContext";
+import { Background } from "./styled";
+
 
 export const DetailPage = () => {
   const navigate = useNavigate();
@@ -19,10 +22,11 @@ export const DetailPage = () => {
 
 
   return (
-    <div>
+    <Background>
       <p>Página de Detalhes</p>
       <br />
       <button onClick={goToHome}>Home</button>
+
       <br />
       <br />
       <br />
@@ -44,5 +48,8 @@ export const DetailPage = () => {
       ))}
       <p>{`Total: ${pokemons[id].stats.map(s => s[1]).reduce((i,j) => i+j)}`}</p>
     </div>
+
+    </Background>
+
   );
 };

@@ -1,6 +1,11 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+
 import PokedexContext from "../PokedexContext";
+
+import { Background } from "./styled";
+import {  useRequestData } from "../Hooks/useRequestData";
+
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -15,9 +20,19 @@ export const Home = () => {
 
   const { pokemons, removePokedex, addPokedex } = useContext(PokedexContext)
 
+  const pkms = useRequestData();
+
+  // const allpkms = pkms.map((pkms,key) => <p key={key}>{pkms?.name}</p> )
+
+
+
+  
+
   return (
-    <div>
+    <Background>
+      {/* {allpkms} */}
       <p>Home</p>
+
       <br />
       <br />
       {/* <button onClick={goToPokedex}>Ir para pokedex</button> mudar botao botão chato */}
@@ -39,5 +54,10 @@ export const Home = () => {
       </div>
       
     </div>
+
+      <button onClick={goToPokedex}>ir para pokedex</button>
+      <button onClick={goDetailPage}>página de detalhe</button>
+    </Background>
+
   );
 };
