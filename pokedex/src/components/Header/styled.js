@@ -20,4 +20,45 @@ export const Button = styled.button`
   cursor: pointer;
   text-align: center;
   font-size: 15px;
+  &:hover {
+    background-color: #9370DB;
+    animation: bounce 0.9s linear;
+  }
+  @keyframes bounce {
+    20% {
+        transform: translateY(-6px);
+    }
+    40% {
+        transform: translateY(0px);
+    }
+
+    80% {
+        transform: translateY(-2px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 `;
+
+export const ImgLogo = styled.img`
+ &:hover {
+    animation: bounce 0.9s linear;
+  }
+  @keyframes bounce {
+    20% {
+        transform: translateY(-7px);
+    }
+    40% {
+        transform: translateY(0px);
+    }
+
+    80% {
+        transform: translateY(-2px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+`
