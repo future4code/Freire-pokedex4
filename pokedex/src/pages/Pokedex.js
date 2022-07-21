@@ -28,7 +28,7 @@ export const Pokedex = () => {
       <div>
         {pokemons.map((p, index) => (
           <span key={index} hidden={!p.inPokedex}>
-            <img src={p.img} width={50} height={50} />
+            <img src={p.img} width={100} height={100} />
             <p>
               {p.name}
             </p>
