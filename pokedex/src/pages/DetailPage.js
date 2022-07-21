@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { Background } from "./styled";
 
 export const DetailPage = () => {
   const navigate = useNavigate();
@@ -8,9 +9,9 @@ export const DetailPage = () => {
     navigate("/");
   };
   return (
-    <div>
+    <Background>
       <p>Página de Detalhes</p>
       <button onClick={goToHome}>Home</button>
-    </div>
+    </Background>
   );
 };

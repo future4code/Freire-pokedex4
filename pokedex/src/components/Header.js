@@ -1,5 +1,5 @@
 import React from "react";
-import pokemonlogo from "../assets/img/pokemonLogo.png"
+import pokemonlogo from "../assets/img/PokemonLogo.png"
 import { DivTop } from "./styled";
 import { Button } from "./styled";
 
