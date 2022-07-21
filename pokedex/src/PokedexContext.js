@@ -2,7 +2,7 @@ import React from "react";
 
 const PokedexContext = React.createContext({
     pokemons: [],
-    removePokedex: (index) => { },
+    removePokedex: (index) => {},
     addPokedex: (index) => { }
 });
 

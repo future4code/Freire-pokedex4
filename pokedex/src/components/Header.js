@@ -12,12 +12,17 @@ export const Header = () => {
     const goToPokedex = () => {
         navigate("/pokedex");
       };
+    const goToHome = () => {
+        navigate("/");
+      };
     
     return(
         <DivTop>
             <ButtonNone></ButtonNone>
             <img src={pokemonlogo} alt="Pokemon Api Logo"/>
-            <Button onClick= {goToPokedex} >Ir para Pokédex</Button> {/*botão não funciona */}
+            <Button onClick= {goToPokedex} >Ir para Pokédex</Button> 
+            <Button onClick={goToHome}>Home</Button> 
+            
         </DivTop>
     );
 }; 
