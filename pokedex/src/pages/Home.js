@@ -25,6 +25,7 @@ export const Home = () => {
       <div>
         {pokemons.map((p, index) => (
           <span key={index}>
+            <p>#{p.id}</p>
             <img src={p.img} width={50} height={50} alt="" />{" "}
             {/* imagem do pokemon*/}
             <p>{p.name}</p>

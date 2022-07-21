@@ -25,3 +25,10 @@ export const CardPkm = styled.div`
   border-radius: 20px;
   width: 280px;
 `;
+
+export const BaseStats = styled.div`
+ display: flex;
+  background-color: #fafaff;
+
+
+`

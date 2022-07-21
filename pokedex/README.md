@@ -1,3 +1,37 @@
+# Project Pokedex 
+ 
+[Link do Surge](sem link)
+
+# Contributors
+| João Victor | Maria Woo | Murilo Cardoso |
+
+|Programming Languages|Library-React|
+|----------|----------|
+|   HTML| React Router
+|   CSS | Styled-Component |
+|   React.JS | Axios| 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

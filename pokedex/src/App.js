@@ -3,7 +3,7 @@ import PokedexContext from "./PokedexContext";
 import { Router } from "./Routes/Router";
 
 function App() {
-  const qtdPokemins = 20;
+  const qtdPokemins = 23;
 
   const [pokemons, setPokemons] = useState([]);
 
