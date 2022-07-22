@@ -24,7 +24,7 @@ export const Pokedex = () => {
   return (
     <div>
       <SearchDiv>
-        <h1>Pokedexxx</h1>
+        <h2>Pokedexxx</h2>
       </SearchDiv>
       <Background>
         {pokemons.map((p, index) => (

@@ -23,8 +23,12 @@ export const Home = () => {
   return (
     <div>
       <SearchDiv>
-        <h2>Todos os Pokemons!</h2>
-        <input placeholder="Busca"></input>
+      <h2>Todos os Pokemons!</h2>
+        <div>
+          <input placeholder="Buscar Pokemon">
+          </input>
+          <button>Buscar</button>
+        </div>
       </SearchDiv>
 
       <Background>
