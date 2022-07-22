@@ -18,7 +18,7 @@ function App() {
     const pokemon = {};
     pokemon["name"] = body.name;
     pokemon["skills"] = body.types.map((slot) => slot.type.name);
-    pokemon["img"] = body.sprites.other["official-artwork"].front_default.slice(57);
+    pokemon["img"] = body.sprites?.other["official-artwork"]?.front_default.slice(57);
     pokemon["img_front"] = body.sprites.front_default.slice(57);
     pokemon["img_back"] = body.sprites.back_default.slice(57);
     pokemon["moves"] = body.moves.map((moves) => moves.move.name);

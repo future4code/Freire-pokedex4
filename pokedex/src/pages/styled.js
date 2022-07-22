@@ -21,20 +21,14 @@ export const SearchDiv = styled.div`
 
   input {
     align-items: center;
-    
+
     width: 200px;
     height: 15px;
   }
-  @media(max-width: 550px) {
+  @media (max-width: 550px) {
     flex-direction: column;
-    
   }
-
 `;
-
-
-
-
 
 export const CardPkm = styled.div`
   margin: 10px 10px;
@@ -71,9 +65,4 @@ export const ButtonCapture = styled.button`
   &:hover {
     opacity: 70%;
   }
-`;
-
-export const BaseStats = styled.div`
-  display: flex;
-  background-color: #fafaff;
 `;
