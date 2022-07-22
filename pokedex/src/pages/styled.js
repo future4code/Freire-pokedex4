@@ -18,6 +18,7 @@ export const SearchDiv = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: purple;
+  color: white;
 
   input {
     align-items: center;

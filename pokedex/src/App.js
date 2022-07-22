@@ -3,7 +3,7 @@ import PokedexContext from "./PokedexContext";
 import { Router } from "./Routes/Router";
 
 function App() {
-  const qtdPokemins = 24;
+  const qtdPokemins = 100;
 
   const [pokemons, setPokemons] = useState([]);
 
@@ -16,11 +16,12 @@ function App() {
       await fetch(`https://pokeapi.co/api/v2/pokemon/${index}/`)
     ).json();
     const pokemon = {};
+    pokemon["id"] = body.id
     pokemon["name"] = body.name;
     pokemon["skills"] = body.types.map((slot) => slot.type.name);
-    pokemon["img"] = body.sprites?.other["official-artwork"]?.front_default.slice(57);
-    pokemon["img_front"] = body.sprites.front_default.slice(57);
-    pokemon["img_back"] = body.sprites.back_default.slice(57);
+    pokemon["img"] = body.sprites?.other["official-artwork"]?.front_default;
+    pokemon["img_front"] = body.sprites?.front_default;
+    pokemon["img_back"] = body.sprites?.back_default;
     pokemon["moves"] = body.moves.map((moves) => moves.move.name);
     pokemon["stats"] = body.stats.map((stats) => [
       stats.stat.name,
