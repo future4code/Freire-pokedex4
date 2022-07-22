@@ -14,10 +14,11 @@ export const DetailPage = () => {
     <div>
       <div>
         <p>Página de Detalhes</p>
-        <button onClick={goToHome}>Home</button>
+       
         <br />
         <br />
         <br />
+        
         {!pokemons[id].inPokedex ? (
           <button onClick={() => addPokedex(id)}>Adicionar à Pokedex</button>
         ) : (

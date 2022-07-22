@@ -3,7 +3,7 @@ import PokedexContext from "./PokedexContext";
 import { Router } from "./Routes/Router";
 
 function App() {
-  const qtdPokemins = 23;
+  const qtdPokemins = 24;
 
   const [pokemons, setPokemons] = useState([]);
 
@@ -41,6 +41,10 @@ function App() {
       })
       .catch((error) => console.log(error));
   };
+
+
+
+  
 
   const addPokedex = (index) => {
     const tmp = [...pokemons];
