@@ -11,6 +11,7 @@ export const Background = styled.div`
   color: white;
   flex-wrap: wrap;
   display: flex;
+  justify-content: space-around
 `;
 export const SearchDiv = styled.div`
   display: flex;
@@ -19,10 +20,12 @@ export const SearchDiv = styled.div`
   justify-content: space-between;
   background-color: purple;
   color: white;
+  background-color: #5d5d5d;
 
   input {
     align-items: center;
-
+    border: none;
+    
     width: 200px;
     height: 15px;
   }

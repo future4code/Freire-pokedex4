@@ -42,7 +42,7 @@ export const Home = () => {
                 </ButtonCapture>
               ) : (
                 <ButtonCapture onClick={() => removePokedex(index)}>
-                  Remover da Pokedex
+                  Remover
                 </ButtonCapture>
               )}
               <ButtonCapture onClick={() => goDetailPage(index)}>
