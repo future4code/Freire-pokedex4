@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import PokedexContext from "../../PokedexContext";
-import { ContainerDiv ,BackgroundDetail, BaseStats } from "./styled";
+import { ContainerDiv,AlignDiv, H1  ,BackgroundDetail, BaseStats,GlassImageOne } from "./styled";
 
 export const DetailPage = () => {
   const { pokemons } = useContext(PokedexContext);
@@ -10,7 +10,8 @@ export const DetailPage = () => {
 
   return (
     <ContainerDiv>
-      <p>Página de Detalhes</p>
+      <AlignDiv>
+      <H1>Detalhes</H1>
       <BackgroundDetail>
         
 
@@ -20,12 +21,12 @@ export const DetailPage = () => {
         </div>
         <p>{pokemons[id].name}</p>
         <p>{pokemons[id].skills.map((s) => " " + s + " ")}</p>
-        <div>
-          <img src={pokemons[id].img_front} width={100} height={100} alt="" />
-        </div>
-        <div>
-          <img src={pokemons[id].img_back} width={100} height={100} alt="" />
-        </div>
+        <GlassImageOne>
+          <img src={pokemons[id].img_front} width={120} height={120} alt="" />
+        </GlassImageOne>
+        <GlassImageOne>
+          <img src={pokemons[id].img_back} width={120} height={120} alt="" />
+        </GlassImageOne>
         <BaseStats>
           <p>Base stats</p>
           {pokemons[id].stats.map((s, i) => (
@@ -33,14 +34,16 @@ export const DetailPage = () => {
               <p>{`${s[0]}: ${s[1]}`}</p>
             </span>
           ))}
-        </BaseStats>
+        
       
       <div>
         <p>{`Total: ${pokemons[id].stats
           .map((s) => s[1])
           .reduce((i, j) => i + j)}`}</p>
       </div>
+      </BaseStats>
       </BackgroundDetail>
+      </AlignDiv>
     </ContainerDiv>
   );
 };
