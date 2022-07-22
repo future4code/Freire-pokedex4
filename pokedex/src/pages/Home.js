@@ -1,7 +1,13 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import PokedexContext from "../PokedexContext";
-import { Background, CardPkm, CaptureDiv, ButtonCapture } from "./styled";
+import {
+  Background,
+  CardPkm,
+  CaptureDiv,
+  ButtonCapture,
+  SearchDiv,
+} from "./styled";
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -16,33 +22,32 @@ export const Home = () => {
 
   return (
     <div>
+      <SearchDiv>
+        <h2>Todos os Pokemons!</h2>
+        <input placeholder="Busca"></input>
+      </SearchDiv>
+
       <Background>
-        <div>
-          <input placeholder="Busca"></input>
-          <h2>Todos os Pokemons!</h2>
-        </div>
         {pokemons.map((p, index) => (
-
           <CardPkm key={index}>
-            <img src={p.img} width={150} height={150} alt="" />{" "}
-
-          
-           
-           
-
+            <img src={p.img} width={150} height={150} alt="" />
             {/* imagem do pokemon*/}
             <p>{p.name}</p>
             <p>{p.skills.map((s) => " " + s + " ")}</p>{" "}
             {/* o pokemon precisa sumir do home*/}
             <CaptureDiv>
               {!p.inPokedex ? (
-                <ButtonCapture onClick={() => addPokedex(index)}>Capturar</ButtonCapture>
+                <ButtonCapture onClick={() => addPokedex(index)}>
+                  Capturar
+                </ButtonCapture>
               ) : (
                 <ButtonCapture onClick={() => removePokedex(index)}>
                   Remover da Pokedex
                 </ButtonCapture>
               )}
-              <ButtonCapture onClick={() => goDetailPage(index)}>Detalhes</ButtonCapture>
+              <ButtonCapture onClick={() => goDetailPage(index)}>
+                Detalhes
+              </ButtonCapture>
             </CaptureDiv>
           </CardPkm>
         ))}
