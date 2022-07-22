@@ -46,7 +46,36 @@ export const CardPkm = styled.div`
   background-image: url(${imgpkm});
   background-repeat: no-repeat;
   background-color: purple;
+
   background-position: top right;
+`;
+
+export const Types = styled.div`
+  display: inline-block;
+  margin: 5px;
+  width: 65px;
+  height: 28px;
+  border-radius: 10px;
+  background-color: ${(props) => {
+    switch (props.backgroundColor) {
+      case "grass":
+        return "#729F92";
+      case "poison":
+        return "#AD61AE";
+      case "fire":
+        return "#EAAB7D";
+      case "water":
+        return "#71C3FF";
+      case "flying":
+        return "#BF9762";
+      case "bug":
+        return "#76A866";
+      case "normal":
+        return "#BF9762";
+
+      default:
+    }
+  }}; ;
 `;
 export const CaptureDiv = styled.div`
   display: flex;

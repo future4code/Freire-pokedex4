@@ -29,9 +29,48 @@ export const H1 = styled.h1`
   font-family: Fredoka -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 `;
+export const ContainerNameTypes = styled.div`
+display: flex;
+align-items: center;
+flex-direction: row;
+padding-left: 50px;
+
+`
+
 export const H2 = styled.h2`
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: xx-large;
   text-transform: uppercase;
+ margin-right: 60px;
+`;
+
+export const Types = styled.div`
+  display: inline-block;
+  margin: 5px;
+  width: 65px;
+  height: 28px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: ${(props) => {
+    switch (props.backgroundColor) {
+      case "grass":
+        return "#729F92";
+      case "poison":
+        return "#AD61AE";
+      case "fire":
+        return "#EAAB7D";
+      case "water":
+        return "#71C3FF";
+      case "flying":
+        return "#BF9762";
+      case "bug":
+        return "#76A866";
+      case "normal":
+        return "#BF9762";
+
+      default:
+    }
+  }}; ;
 `;
 
 export const BackgroundDetail = styled.div`
@@ -98,6 +137,8 @@ export const BaseStats = styled.div`
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+
+  
 `;
 
 export const BarraDeProgesso = styled.div`
