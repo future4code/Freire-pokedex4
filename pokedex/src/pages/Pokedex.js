@@ -1,61 +1,48 @@
 import React, { useEffect } from "react";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { ButtonCapture, CaptureDiv, SearchDiv } from "./styled";
 import PokedexContext from "../PokedexContext";
 
-import { Background,CardPkm } from "./styled";
-
+import { Background, CardPkm } from "./styled";
 
 export const Pokedex = () => {
-
-
   const navigate = useNavigate();
 
-  const goToHome = () => {
+  /*   const goToHome = () => {
     navigate("/");
-  };
+  }; */
 
   const goDetailPage = (index) => {
     navigate(`/detail/${index}`);
   };
 
-  const {pokemons,removePokedex} = useContext(PokedexContext)
+  const { pokemons, removePokedex } = useContext(PokedexContext);
 
-  useEffect(() => {
-    
-  },[])
- 
+  useEffect(() => {}, []);
+
   return (
-    <Background>
-      <p>Pokedex</p>
-      <button onClick={goToHome}>Home</button>
-      <br />
-      <br />
-      <CardPkm>
+    <div>
+      <SearchDiv>
+        <h2>Pokedexxx</h2>
+      </SearchDiv>
+      <Background>
         {pokemons.map((p, index) => (
-          <span key={index} hidden={!p.inPokedex}>
-
-            
+          <CardPkm key={index} hidden={!p.inPokedex}>
             <img src={p.img} width={100} height={100} alt="" />
-            <p>
-              {p.name}
-            </p>
-            <p>{p.skills.map(s => " " + s + " ")}</p>
-             <button onClick= {() => removePokedex(index)}>Remover da Pokedex</button>
-             
-             <button onClick={() => goDetailPage(index)}>página de detalhe</button>
-            <br />
-            <br />
-          </span>
+            <p>{p.name}</p>
+            <p>{p.skills.map((s) => " " + s + " ")}</p>
+            <CaptureDiv>
+              <ButtonCapture onClick={() => removePokedex(index)}>
+                Remover
+              </ButtonCapture>
+              <ButtonCapture onClick={() => goDetailPage(index)}>
+                Detalhes
+              </ButtonCapture>
+            </CaptureDiv>
+          </CardPkm>
         ))}
-
-      </CardPkm>
-
-     
-
-     
-
-    </Background>
+      </Background>
+    </div>
   );
 };

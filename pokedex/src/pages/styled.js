@@ -11,6 +11,7 @@ export const Background = styled.div`
   color: white;
   flex-wrap: wrap;
   display: flex;
+  justify-content: space-around
 `;
 export const SearchDiv = styled.div`
   display: flex;
@@ -19,12 +20,20 @@ export const SearchDiv = styled.div`
   justify-content: space-between;
   background-color: purple;
   color: white;
+  background-color: #5d5d5d;
+  border: none;
+  font-size: medium;
 
   input {
     align-items: center;
-
-    width: 200px;
+    border: none;
+    background-color: #D3D3D3;
+    width: 150px;
     height: 15px;
+    padding: 10px;
+    box-shadow: 0px 2px 2px (0,0,0,0.25);
+    border-radius: 4px;
+    color: white;
   }
   @media (max-width: 550px) {
     flex-direction: column;
