@@ -1,17 +1,17 @@
 # POKEDEX
 
 ### Nome dos integrantes: 
-- João Victor
+- João Victor Victoy
 - Maria Woo
 - Murilo Cardoso
  
 [Link do Surge](pokedexxx-4.surge.sh)
 
 
-O que funciona:
-- Item 1
-- Item 2
+O que funciona
+- Adicionar na pagina pokedex
+- Detalhes
+- Aparecer pokemons
 
-O que não funciona: 
-- Item 3
-- Item 4
+O que não funciona
+- tirar pokemons da tela Home
