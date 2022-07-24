@@ -7,6 +7,7 @@ import {
   CaptureDiv,
   ButtonCapture,
   SearchDiv,
+  Types,
 } from "./styled";
 
 export const Home = () => {
@@ -37,7 +38,7 @@ export const Home = () => {
             <img src={p.img} width={150} height={150} alt="" />
             {/* imagem do pokemon*/}
             <p>{p.name}</p>
-            <p>{p.skills.map((s) => " " + s + " ")}</p>{" "}
+            <div>{p.skills.map((s) => <Types backgroundColor={s}>{s}</Types> )}</div>{" "}
             {/* o pokemon precisa sumir do home*/}
             <CaptureDiv>
               {!p.inPokedex ? (

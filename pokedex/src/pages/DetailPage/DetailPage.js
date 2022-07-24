@@ -8,7 +8,7 @@ import {
   H2,
   BackgroundDetail,
   BaseStats,
-  GlassImageOne, BarraDeProgesso
+  GlassImageOne, BarraDeProgesso,Types,ContainerNameTypes,
 } from "./styled";
 
 export const DetailPage = () => {
@@ -21,9 +21,9 @@ export const DetailPage = () => {
       <AlignDiv>
         <H1>Detalhes</H1>
         <BackgroundDetail>
-        <H2>{pokemons[id].name}</H2> <p>{pokemons[id].skills.map((s) => " " + s + " ")}</p>
+        <ContainerNameTypes> <H2>{pokemons[id].name}</H2> {pokemons[id].skills.map((s) => <Types backgroundColor={s}> {s} </Types> )}</ContainerNameTypes>
           <div>
-            <img src={pokemons[id].img} width={200} height={200} alt="" />
+            <img src={pokemons[id].img} width={250} height={250} alt="" />
           </div>
           
           
@@ -33,7 +33,7 @@ export const DetailPage = () => {
             <img src={pokemons[id].img_back} width={120} height={120} alt="" />
           </GlassImageOne>
           <BaseStats>
-            <p>Base stats</p>
+            <h2>Base stats</h2>
             {pokemons[id].stats.map((s, i) => (
               <span key={i}>
                 <p>{`${s[0]}: ${s[1]}`}</p>
