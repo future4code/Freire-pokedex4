@@ -1,11 +1,12 @@
 # POKEDEX
 
-Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
+### Nome dos integrantes: 
+- João Victor
+- Maria Woo
+- Murilo Cardoso
+ 
+[Link do Surge](pokedexxx-4.surge.sh)
 
-Link do Surge: www.link.com.br
 
 O que funciona:
 - Item 1
