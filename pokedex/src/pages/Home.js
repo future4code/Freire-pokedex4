@@ -10,6 +10,10 @@ import {
   Types,
 } from "./styled";
 
+
+
+
+
 export const Home = () => {
   const navigate = useNavigate();
 
@@ -19,26 +23,33 @@ export const Home = () => {
 
   const { pokemons, removePokedex, addPokedex } = useContext(PokedexContext);
 
-  // const allpkms = pkms.map((pkms,key) => <p key={key}>{pkms?.name}</p> )
+  // chamas os types do slot 1 para renderizar a cor  vem dentrod e 1 array não consegui acessar
+  const teste =  pokemons.map((p) => p.skill.map(s => s.type.name));
+ 
+  
 
   return (
-    <div>
+    <div >
       <SearchDiv>
-      <h2>Todos os Pokemons!</h2>
+        <h2>Todos os Pokemons!</h2>
         <div>
-          <input placeholder="Buscar Pokemon">
-          </input>
+          <input placeholder="Buscar Pokemon"></input>
           <button>Buscar</button>
         </div>
       </SearchDiv>
 
-      <Background>
+      <Background >
         {pokemons.map((p, index) => (
-          <CardPkm key={index}>
+         <CardPkm key={index} backGroundColor='steel' >
+            {}
             <img src={p.img} width={150} height={150} alt="" />
             {/* imagem do pokemon*/}
             <p>{p.name}</p>
-            <div>{p.skills.map((s) => <Types backgroundColor={s}>{s}</Types> )}</div>{" "}
+            <div>
+              {p.skills.map((s) => (
+                <Types backgroundColor={s}>{s}</Types>
+              ))}
+            </div>
             {/* o pokemon precisa sumir do home*/}
             <CaptureDiv>
               {!p.inPokedex ? (
