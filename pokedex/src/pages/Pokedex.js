@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { ButtonCapture, CaptureDiv, SearchDiv } from "./styled";
+import { ButtonCapture, CaptureDiv, SearchDiv,Types } from "./styled";
 import PokedexContext from "../PokedexContext";
 
 import { Background, CardPkm } from "./styled";
@@ -31,7 +31,11 @@ export const Pokedex = () => {
           <CardPkm key={index} hidden={!p.inPokedex}>
             <img src={p.img} width={100} height={100} alt="" />
             <p>{p.name}</p>
-            <p>{p.skills.map((s) => " " + s + " ")}</p>
+            <div>
+              {p.skills.map((s) => (
+                <Types backgroundColor={s}>{s}</Types>
+              ))}
+            </div>
             <CaptureDiv>
               <ButtonCapture onClick={() => removePokedex(index)}>
                 Remover

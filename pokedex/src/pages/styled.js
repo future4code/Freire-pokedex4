@@ -11,7 +11,7 @@ export const Background = styled.div`
   color: white;
   flex-wrap: wrap;
   display: flex;
-  justify-content: space-around
+  justify-content: space-around;
 `;
 export const SearchDiv = styled.div`
   display: flex;
@@ -54,9 +54,50 @@ export const CardPkm = styled.div`
   font-weight: bold;
   background-image: url(${imgpkm});
   background-repeat: no-repeat;
-  background-color: purple;
-
   background-position: top right;
+
+  background-color: ${(props) => {
+    switch (props.backGroundColor) {
+      case "grass":
+        return "#9bcc50";
+      case "poison":
+        return "#b97fc9";
+      case "fire":
+        return "#fd7d24";
+      case "water":
+        return "#4592c4";
+      case "flying":
+        return "#3dc7ef ";
+      case "bug":
+        return "#729f3f";
+      case "normal":
+        return "#a4acaf";
+      case "ground":
+        return "#ab9842";
+      case "electric":
+        return "#eed535";
+      case "fairy":
+        return "#fdb9e9";
+      case "psychic":
+        return "#f366b9";
+      case "fighting":
+        return "#d56723";
+      case "rock":
+        return "#a38c21";
+      case "steel":
+        return "#9eb7b8";
+      case "ghost":
+        return "#7b62a3";
+      case "ice":
+        return "#51c4e7";
+      case "dark":
+        return "#707070";
+      case "dragon":
+        return "#f16e57";
+
+      default:
+    }
+  }}; 
 `;
 
 export const Types = styled.div`
@@ -65,6 +106,7 @@ export const Types = styled.div`
   width: 66px;
   height: 26px;
   border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   background-color: ${(props) => {
     switch (props.backgroundColor) {
       case "grass":
@@ -105,7 +147,7 @@ export const Types = styled.div`
         return "#f16e57";
       default:
     }
-  }}; ;
+  }}; 
 `;
 export const CaptureDiv = styled.div`
   display: flex;

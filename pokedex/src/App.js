@@ -3,7 +3,7 @@ import PokedexContext from "./PokedexContext";
 import { Router } from "./Routes/Router";
 
 function App() {
-  const qtdPokemins = 100;
+  const qtdPokemins = 24;
 
   const [pokemons, setPokemons] = useState([]);
 
@@ -18,6 +18,7 @@ function App() {
     const pokemon = {};
     pokemon["id"] = body.id
     pokemon["name"] = body.name;
+    pokemon["skill"] = body.types.filter(((slot) => slot.slot === 1));
     pokemon["skills"] = body.types.map((slot) => slot.type.name);
     pokemon["img"] = body.sprites?.other["official-artwork"]?.front_default;
     pokemon["img_front"] = body.sprites?.front_default;
