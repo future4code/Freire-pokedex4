@@ -28,7 +28,7 @@ export const Pokedex = () => {
       </SearchDiv>
       <Background>
         {pokemons.map((p, index) => (
-          <CardPkm key={index} hidden={!p.inPokedex}>
+          <CardPkm key={index} hidden={!p.inPokedex} backGroundColor='steel'>
             <img src={p.img} width={100} height={100} alt="" />
             <p>{p.name}</p>
             <div>
