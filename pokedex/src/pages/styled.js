@@ -53,26 +53,47 @@ export const CardPkm = styled.div`
 export const Types = styled.div`
   display: inline-block;
   margin: 5px;
-  width: 65px;
-  height: 28px;
+  width: 66px;
+  height: 26px;
   border-radius: 10px;
   background-color: ${(props) => {
     switch (props.backgroundColor) {
       case "grass":
-        return "#729F92";
+        return "#9bcc50";
       case "poison":
-        return "#AD61AE";
+        return "#b97fc9";
       case "fire":
-        return "#EAAB7D";
+        return "#fd7d24";
       case "water":
-        return "#71C3FF";
+        return "#4592c4";
       case "flying":
-        return "#BF9762";
+        return "#3dc7ef ";
       case "bug":
-        return "#76A866";
+        return "#729f3f";
       case "normal":
-        return "#BF9762";
-
+        return "#a4acaf";
+      case "ground":
+        return "#ab9842";
+      case "electric":
+        return "#eed535";
+      case "fairy":
+        return "#fdb9e9";
+      case "psychic":
+        return "#f366b9";
+      case "fighting":
+        return "#d56723";
+      case "rock":
+        return "#a38c21";
+      case "steel":
+        return "#9eb7b8";
+      case "ghost":
+        return "#7b62a3";
+      case "ice":
+        return "#51c4e7";
+      case "dark":
+        return "#707070";
+      case "dragon":
+        return "#f16e57";
       default:
     }
   }}; ;

@@ -33,7 +33,7 @@ export const DetailPage = () => {
             <img src={pokemons[id].img_back} width={120} height={120} alt="" />
           </GlassImageOne>
           <BaseStats>
-            <p>Base stats</p>
+            <h2>Base stats</h2>
             {pokemons[id].stats.map((s, i) => (
               <span key={i}>
                 <p>{`${s[0]}: ${s[1]}`}</p>
