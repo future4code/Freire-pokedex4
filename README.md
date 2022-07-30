@@ -4,8 +4,8 @@
 - João Victor Victoy
 - Maria Woo
 - Murilo Cardoso
- 
-[Link do Surge](pokedexxx-4.surge.sh)
+
+surge: https://pokedexxx-4.surge.sh/
 
 
 O que funciona
